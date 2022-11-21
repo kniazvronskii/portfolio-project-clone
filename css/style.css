@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root{
+   --dark-purple:#59304A;
+   --purple:#8A1C5E;
+   --dark:#252525;
+   --dark-green:#1B3A3C;
+   --green:#234C4F;
    --yellow:#ffcc0d;
    --black:#000;
    --white:#fff;
    --light-bg:#eee;
-   --border-bold:.5rem solid var(--black);
-   --border-light:.2rem solid var(--black);
+   --border-bold:.5rem solid var(--dark);
+   --border-light:.2rem solid var(--dark);
 }
 
 *{
@@ -16,12 +21,12 @@
    outline: none; border:none;
    text-decoration: none;
    text-transform: capitalize;
-   color:var(--black);
+   color:var(--dark);
 }
 
 *::selection{
-   background-color: var(--black);
-   color:var(--yellow);
+   background-color: var(--dark);
+   color:var(--dark-purple);
 }
 
 *::-webkit-scrollbar{
@@ -30,11 +35,11 @@
 }
 
 *::-webkit-scrollbar-track{
-   background-color: transparent;
+   background-color: var(--green);
 }
 
 *::-webkit-scrollbar-thumb{
-   background-color: var(--yellow);
+   background-color: var(--dark-purple);
 }
 
 html{
@@ -46,6 +51,7 @@ html{
 body{
     overflow: hidden;
     transition: .2s linear !important;
+    background-color: var(--green);
 }
 
 body.active{
@@ -77,11 +83,14 @@ section{
     padding: 1rem 3rem;
     border: var(--border-light);
     font-size: 2rem;
+    background-color: var(--dark);
+    color: var(--green);
+    font-weight: bold;
 }
 
 .btn:hover{
-    background-color: var(--black);
-    color: var(--white);
+    background-color: #dddddc;
+    color: var(--dark);
 }
 
 .header{
@@ -89,7 +98,7 @@ section{
     top: 0;
     left: -35rem;
     height: 100vh;
-    background-color: var(--white);
+    background-color: var(--dark-green);
     border-right: var(--border-bold);
     width: 35rem;
     padding: 3rem 2rem;
@@ -104,10 +113,10 @@ section{
 
 .header .logo{
     text-transform: uppercase;
-    border-bottom: var(--border-bold);
+    border-bottom: .5rem solid #dddddc;
     font-weight: bolder;
     font-size: 4.5rem;
-
+    color: #dddddc;
 }
 
 .header .navbar {
@@ -119,11 +128,13 @@ section{
     font-size: 2.5rem;
     padding: 1.5rem;
     margin: .5rem;
+    color: #dddddc;
 }
 
 .header .navbar a.active,
 .header .navbar a:hover{
-    background-color: var(--yellow);
+    background-color: var(--dark-purple);
+    color: var(--dark);
 }
 
 .header .follow a{
@@ -131,6 +142,7 @@ section{
     margin: 0 1rem;
     cursor: pointer;
     transition: .6s linear !important;
+    color: #dddddc;
 }
 
 .header .follow a:hover{
@@ -146,8 +158,8 @@ section{
     width: 5rem;
     font-size: 2.5rem;
     cursor: pointer;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--dark);
+    color: #dddddc;
      
 }
 
@@ -167,7 +179,6 @@ section{
     flex: 1 1 40rem;
 }
 
-/* width is not correct */
 .home .image img{
     object-fit: cover;
     height: 65rem;
@@ -189,7 +200,7 @@ section{
 .home .content span{
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: var(--yellow);
+    background-color: var(--dark-purple);
     font-size: 2.5rem;
     margin: 1rem 0;
 }
@@ -198,6 +209,7 @@ section{
     font-size: 1.7rem;
     line-height: 2;
     padding: 1rem 0;
+    color: #dddddc;
 }
 
 .about .biography p{
@@ -205,6 +217,8 @@ section{
     max-width: 70rem;
     line-height: 2;
     font-size: 1.8rem;
+    color: #dddddc;
+    
 }
 
 .about .biography .bio{
@@ -215,16 +229,18 @@ section{
     padding: 1rem 2rem;
     display: inline-block;
     margin: 1rem;
-    background-color: var(--light-bg);
+    background-color: var(--dark-green);
     border: var(--border-light);
     word-break: break-all;
     font-size: 2.5rem;
     font-weight: normal;
     text-transform: none;
+    color: #dddddc;
 }
 
 .about .biography .bio h3 span{
     font-weight: lighter;
+    color: var(--purple);
 }
 
 .about .skills{
@@ -245,12 +261,13 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--yellow);
+    background-color: var(--dark-purple);
     font-size: 2rem;
     padding: 2rem;
 }
 .about .skills .progress .bar span{
     font-size: normal;
+    color: #dddddc;
 }
 
 .about .skills .progress .bar:nth-child(1) h3{
@@ -289,29 +306,46 @@ section{
 .about .edu-exp .row .box-container .title{
     padding: 1.5rem;
     font-size: 3rem;
-    background-color: var(--yellow);
+    background-color: var(--dark-purple);
 }
 
 .about .edu-exp .row .box-container .box{
     text-align: left;
     margin: 1.5rem 0;
-    background-color: var(--light-bg);
+    background-color: var(--dark-green);
     padding: 2rem;
+}
+
+.about .edu-exp .row .box-container .box:hover{
+    background-color: var(--dark);
 }
 
 .about .edu-exp .row .box-container .box span{
     font-size: 1.5rem;
+    color: #dddddc;
 }
 
 .about .edu-exp .row .box-container .box h3{
     font-size: 2.5rem;
     font-weight: normal;
     margin-top: 1.5rem;
+    color: #dddddc;
 }
 
 .about .edu-exp .row .box-container .box p{
     line-height: 2;
     font-size: 1.7rem;
+    color: #dddddc;
+
+}
+
+.about .edu-exp .row .box-container .box:hover span{
+    color: var(--purple);
+}
+
+.about .edu-exp .row .box-container .box:hover p,
+.about .edu-exp .row .box-container .box:hover h3 {
+    color: #255255;
 }
 
 .services .box-container{
@@ -335,7 +369,7 @@ section{
     margin: 1rem 0;
     font-size: 2rem;
     padding: 1.5rem;
-    background-color: var(--yellow);
+    background-color: var(--dark-purple);
     font-weight: normal;
 }
 
@@ -345,15 +379,15 @@ section{
 }
 
 .services .box-container .box:hover{
-    background-color: var(--black);
+    background-color: var(--dark);
 }
 
 .services .box-container .box:hover i{
-    color: var(--white);
+    color: var(--green);
 }
 
 .services .box-container .box:hover p{
-    color: var(--white);
+    color: var(--green);
 }
 
 .portfolio .box-container{
@@ -361,11 +395,15 @@ section{
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
     align-items: flex-start;
+    border: var(--border-bold);
+    padding: 3rem 2rem;
+    background-color: var(--dark-green);
 }
 
 .portfolio .box-container .box img{
     height: 32.9rem;
     width: 30rem;
+    border: var(--border-light);
     object-fit: cover;
 }
 
@@ -373,10 +411,12 @@ section{
     margin: 1rem 0;
     font-size: 2rem;
     font-weight: normal;
+    color: #dddddc;
 }
 
 .portfolio .box-container .box span{
     font-size: 1.7rem;
+    color: #dddddc;
 }
 
 .portfolio .box-container:hover .box{
@@ -399,6 +439,8 @@ section{
     text-transform: none;
     border:var(--border-light);
     margin: 1rem 0;
+    background-color: #dddddc;
+
 }
 
 .contact form textarea{
@@ -417,50 +459,58 @@ section{
 }
 
 .contact .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
-    align-items: flex-start;
+    display: flex;
     margin-top: 2rem;
+    justify-content: space-around;
+
 }
 
 .contact .box-container .box{
     padding: 3rem 2rem;
     border: var(--border-light);
-    background-color: var(--light-bg);
+    background-color: var(--dark-green);
+    display: flex;
+    justify-content: center;
+    width: 30%;
 }
 
-/*! FIX */
 .contact .box-container .box i{
     font-size: 2rem;
-    /* height: 5rem; */
-    /* width: 5rem; */
     line-height: 2.5rem;
-    /* color: var(--white); */
-    /* background-color: var(--black); */
     margin-bottom: .5rem;
+    color: var(--green);
+}
+
+.contact .box-container .box i.fas::before{
+    background-color: var(--dark);
+    box-sizing: border-box;
+    border: 1rem solid var(--dark);
 }
 
 .contact .box-container .box h3{
     margin: 1.5rem 0;
     font-size: 2.5rem;
+    color: #dddddc;
+    font-weight: 400;
 }
 
 .contact .box-container .box p{
     font-size: 1.7rem;
     text-transform: none;
+    color: #dddddc;
+    font-weight: 100;
 }
 
 .credit{
     text-align: center;
-    background-color: var(--black);
+    background-color: var(--dark);
     padding: 3rem;
     font-size: 2rem;
-    color: var(--white);
+    color: var(--green);
 }
 
 .credit span{
-    color: var(--yellow);
+    color: var(--dark-purple);
 }
 
 
@@ -478,6 +528,18 @@ section{
         height: auto;
         width: 100%;
     }
+
+    .contact .box-container{
+        flex-direction: column;    
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact .box-container .box{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
 }
 
 @media (max-width: 450px){
@@ -507,6 +569,10 @@ section{
     }
 
     .contact form .flex .box{
+        width: 100%;
+    }
+
+    .contact .box-container .box{
         width: 100%;
     }
 }
