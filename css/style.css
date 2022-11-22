@@ -301,22 +301,19 @@ section{
 }
 
 .about .skills .progress .bar:nth-child(2) h3{
-    width: 72%;
+    width: 12%;
 }
 .about .skills .progress .bar:nth-child(3) h3{
-    width: 10%;
+    width: 0%;
 }
 .about .skills .progress .bar:nth-child(4) h3{
-    width: 2%;
+    width: 0%;
 }
 .about .skills .progress .bar:nth-child(5) h3{
-    width: 0%;
+    width: 10%;
 }
 .about .skills .progress .bar:nth-child(6) h3{
     width: 0%;
-}
-.about .skills .progress .bar:nth-child(7) h3{
-    width: 35%;
 }
 
 .about .edu-exp .row{
